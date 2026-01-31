@@ -1,0 +1,30 @@
+# Gradle / build output
+.gradle/
+**/build/
+
+# Local machine config
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+/out/
+
+# Android
+*.apk
+*.aab
+captures/
+.externalNativeBuild/
+.cxx/
+*.hprof
+
+# Keystores
+*.jks
+*.keystore
+
+# OS junk
+.DS_Store
+Thumbs.db
+*.log
