@@ -2,16 +2,16 @@
 
 ## Student Details
 
-- **Full Name:** `<Enter name>`
-- **CCID:** `<Enter ccid>`
+- **Full Name:** `TingJun Chen`
+- **CCID:** `tingjun1`
 
 ## References and Resources
+https://www.youtube.com/watch?v=tZvjSl9dswg
 
-List any resources used here, or simply put `N/A` if not applicable.
+https://www.youtube.com/watch?v=xTtL8E4LzTQ
 
 ## Verbal Collaboration
 
 | Student Name | CCID     |
 | ------------ | -------- |
-| `<example1>` | `<CCID>` |
-| `<example2>` | `<CCID>` |
+| `N/A` | `N/A` |
