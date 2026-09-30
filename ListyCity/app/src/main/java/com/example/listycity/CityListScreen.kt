@@ -26,11 +26,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.listycity.ui.theme.ListyCityTheme
+import androidx.compose.ui.Alignment
 
 @Composable
 fun CityListScreen(
     cities: List<City>,
     onAddCity: (City) -> Unit,
+    onDeleteCity: (City) -> Unit,
     onUpdateCity: (City, City) -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -127,7 +129,18 @@ fun CityListScreen(
                 )
 
                 Spacer(modifier = Modifier.width(8.dp))
+            }
 
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp),
+                horizontalArrangement = Arrangement.spacedBy(
+                    8.dp,
+                    alignment = Alignment.End
+                )
+
+            ) {
                 Button(
                     modifier = Modifier.padding(vertical = 12.dp),
                     onClick = {
@@ -152,6 +165,25 @@ fun CityListScreen(
                     }
                 ) {
                     Text("UPDATE CITY")
+                }
+
+                Button(
+                    modifier = Modifier.padding(vertical = 12.dp),
+                    onClick = {
+                        val cityToDelete = selectedCity
+                        if (
+                            cityToDelete != null
+                        ) {
+                            onDeleteCity(
+                                cityToDelete
+                            )
+
+                            selectedCity = null
+
+                        }
+                    }
+                )  {
+                    Text("DELETE CITY")
                 }
             }
         }
@@ -213,6 +245,7 @@ fun CityListScreenPreview() {
                 City("Calgary", "AB")
             ),
             onAddCity = {},
+            onDeleteCity = {},
             onUpdateCity = { _, _ -> }
         )
     }
